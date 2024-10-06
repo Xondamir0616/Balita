@@ -1,0 +1,21 @@
+<!-- category.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="site-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h2 class="mb-4">Category: {{ category.title }}</h2>
+        </div>
+      </div>
+      <div class="row blog-entries">
+        <div class="col-md-12 col-lg-8 main-content">
+          {% include 'article_list.html' with article_list=articles %}
+        </div>
+        {% include 'rside.html' %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
